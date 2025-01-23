@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Valentine's Day</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: pink;
+            font-family: 'Arial', sans-serif;
+            text-align: center;
+            overflow: hidden;
+        }
+
+        h1 {
+            font-size: 4rem;
+            color: red;
+            text-shadow: 2px 2px 5px white;
+            margin: 30px 0;
+        }
+
+        .heart {
+            width: 150px;
+            height: 150px;
+            background-color: red;
+            position: relative;
+            margin: 100px auto; /* Moves the heart down and centers it */
+            transform: rotate(-45deg);
+        }
+
+        .heart::before,
+        .heart::after {
+            content: '';
+            width: 150px;
+            height: 150px;
+            background-color: red;
+            border-radius: 50%;
+            position: absolute;
+        }
+
+        .heart::before {
+            top: -75px;
+            left: 0;
+        }
+
+        .heart::after {
+            left: 75px;
+            top: 0;
+        }
+
+        p {
+            font-size: 2rem;
+            color: white;
+            margin: 20px;
+        }
+
+        .balloons {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+        }
+
+        .balloon {
+            position: absolute;
+            width: 30px;
+            height: 50px;
+            background: red;
+            border-radius: 50%;
+            animation: float 10s linear infinite;
+        }
+
+        .balloon::before {
+            content: '';
+            position: absolute;
+            width: 10px;
+            height: 30px;
+            background: pink;
+            border-radius: 50%;
+            left: 10px;
+            top: 10px;
+        }
+
+        /* Add string to balloons */
+        .balloon::after {
+            content: '';
+            position: absolute;
+            width: 2px;
+            height: 50px;
+            background: white;
+            left: 14px;
+            top: 50px;
+        }
+
+        @keyframes float {
+            0% {
+                transform: translateY(100vh);
+                opacity: 1;
+            }
+            100% {
+                transform: translateY(-10%);
+                opacity: 0;
+            }
+        }
+
+        /* Random positions for balloons */
+        .balloon:nth-child(1) { left: 10%; animation-duration: 9s; }
+        .balloon:nth-child(2) { left: 25%; animation-duration: 7s; }
+        .balloon:nth-child(3) { left: 40%; animation-duration: 11s; }
+        .balloon:nth-child(4) { left: 60%; animation-duration: 8s; }
+        .balloon:nth-child(5) { left: 75%; animation-duration: 10s; }
+        .balloon:nth-child(6) { left: 90%; animation-duration: 6s; }
+    </style>
+</head>
+<body>
+    <h1>I LOVE YOU AIJAH</h1>
+    <div class="heart"></div>
+    <p>Will you be my Valentine?</p>
+
+    <!-- Background balloons -->
+    <div class="balloons">
+        <div class="balloon"></div>
+        <div class="balloon"></div>
+        <div class="balloon"></div>
+        <div class="balloon"></div>
+        <div class="balloon"></div>
+        <div class="balloon"></div>
+    </div>
+
+    <!-- MP3 Audio -->
+  
+<audio controls autoplay loop>
+    <source src="https://www.dropbox.com/scl/fi/rfxxip666h1cph5699fye/baby.mp3?rlkey=237k456y2dca4672za47caff1&st=re10h93t&raw=1" type="audio/mpeg">
+    Your browser does not support the audio element. 
+    <a href="https://www.dropbox.com/scl/fi/rfxxip666h1cph5699fye/baby.mp3?rlkey=237k456y2dca4672za47caff1&st=re10h93t&raw=1">Download the audio file</a>.
+</audio>
+</body>
+</html>
